@@ -1,7 +1,8 @@
 class AppConstants {
   const AppConstants._();
 
-  static const appName = 'SunRoute';
+  /// Name shown by the OS (launcher label, recent-apps title).
+  static const appName = 'Travel Where';
   static const packageName = 'com.travel_app';
 
   /// OpenWeather free tier covers 5 days of 3-hour slots.

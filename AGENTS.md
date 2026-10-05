@@ -4,7 +4,7 @@ This file is the working memory for AI agents and contributors. Update it when i
 
 ## Project at a glance
 
-- **Product:** SunRoute, a Flutter app that analyzes sunlight along a planned journey and recommends where to sit.
+- **Product:** SunRoute (installed app name: **Travel Where**), a Flutter app that analyzes sunlight along a planned journey and recommends where to sit.
 - **Package name:** `travel_app` (`pubspec.yaml`).
 - **SDK:** Dart `^3.13.2` (see `pubspec.yaml`).
 - **Main flow:** route input → route retrieval → timed route sampling and sun calculation → weather enrichment → seat scoring and recommendation → interactive results/map/seat detail.
@@ -74,6 +74,11 @@ Overall: all seven high-level user-facing features in `PLAN.md` have correspondi
   - Linux `APPLICATION_ID` is `com.travel_app`; Windows `Runner.rc` company/copyright say SunRoute.
   - Dart package name stays `travel_app` (imports use `package:travel_app/...`).
   - `AppConstants.packageName` (`com.travel_app`) is the user agent for OSM tile requests.
+
+## App name and icon (2026-10-05)
+
+- OS-visible name is **Travel Where**: Android `android:label`, iOS `CFBundleDisplayName`/`CFBundleName`, web `<title>`/`manifest.json`, Windows window title + `Runner.rc` FileDescription/ProductName, Linux GTK titles, macOS `PRODUCT_NAME`, and `AppConstants.appName` (MaterialApp title, shown in Android recents). The in-app brand text ("SunRoute" in `RouteInputScreen._BrandBar`, share text, About) is unchanged.
+- Icon sources live in `assets/icon/`: `app_icon.png` (rounded, transparent corners: Android legacy, web, Windows, macOS), `app_icon_ios.png` (full-bleed, no alpha), and `adaptive_foreground.png` (art at 64% so circle/squircle masks keep the bus, pin and sun) with `adaptive_background.png` (blurred art). They are cropped from the user-supplied logo. Regenerate platform icons with `dart run flutter_launcher_icons` (config at the bottom of `pubspec.yaml`).
 
 ## Credentials and billing notes (2026-10-05)
 

@@ -1,6 +1,6 @@
 {
-    "name": "SunRoute",
-    "short_name": "SunRoute",
+    "name": "Travel Where",
+    "short_name": "Travel Where",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0F1117",
